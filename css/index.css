@@ -1,0 +1,428 @@
+@keyframes up {
+  0% {
+  opacity: 0;
+  }
+  10%, 90% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  transform: translateY(-1024px);
+  }
+}
+
+/* ============== globals ================== */
+
+body {
+  margin: 0;
+  padding: 90px 150px;
+}
+
+#paper {
+  min-height: 3500px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 275px rgba(0,0,0,0.22);
+}
+
+#writable-paper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.section {
+}
+
+.side {
+  width: 50%;
+}
+
+
+
+/* ============== Profile Sections ================== */
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture-frame {
+  display: flex;
+  justify-content: center;
+}
+.picture {
+  height: 460px;
+  width: 290px;
+  /* border-radius: 12px; */
+  background: url(../images/profile-picture.jpg) no-repeat center;
+  background-size: cover;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 40px rgba(0,0,0,0.22);
+  position: relative;
+
+  animation: fall 0.55s ease-in;
+}
+
+.contactme {
+  position: absolute;
+
+  background-color: #b0ff57;
+  border-radius: 9px;
+  height: 70px;
+  width: 70px;
+  right: -50px;
+  bottom: 60px;
+  transition: all 0.4s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  animation: contact-pop 1.8s;
+}
+
+.contactme:hover {
+  width: 480px;
+  height: 172px;
+  bottom: -42px;
+  right: -510px;
+  transition: all 0.4s;
+}
+
+.chat-bubble {
+  position: absolute;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url(../icons/chat.jpeg) no-repeat 50% 55%;
+  background-size: 45%;
+}
+
+.info {
+  position: relative;
+}
+
+.personal-info {
+  color: rgb(76,76,76);
+  font-family: Poppins;
+  padding-left: 15px;
+}
+
+.personal-info>.name {
+  font-size: 48px;
+  font-variant: small-caps;
+ 
+  line-height: 72px;
+  letter-spacing: 0.2ch;
+  text-decoration: #b0ff57 underline;
+  text-underline-position: under;
+
+  animation: appear 0.85s both;
+}
+
+.personal-info>.description {
+  font-size: 24px;
+
+  animation: appear 0.85s 0.25s both;
+}
+
+.personal-info>.meta-description {
+  font-weight: 300;
+  font-size: 18px;
+  opacity: 0.85;
+
+  animation: appear 0.85s 0.5s both;
+}
+
+
+/* ============== History Section ================== */
+
+.history {
+  position: relative;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.history-line {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+
+.circle-wrapper {
+  display: inline;
+  animation: circle-up 0.3s ease-out;
+  position: absolute;
+}
+
+.circle-wrapper-right {
+  left: -50px;
+}
+
+.circle-wrapper-left {
+  right: 50px;
+}
+
+.circle-wrapper .circle {
+  position: absolute;
+  top: 18px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 75px;
+
+  z-index: 100;
+  background-color: white;
+  border: 8px solid  rgb(115,115,115);
+  /* rgba(255, 87, 34, 0.8); */
+
+  animation: circle-pop 0.75s both;
+}
+
+
+
+.birth {
+  background: url(../icons/baby-pacifier.svg);
+}
+
+.education {
+  background: url(../icons/book_icon.jpg)
+}
+
+.experience {
+  background: url(../icons/briefcase.svg)
+}
+
+.circular-image {
+  background-size: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.history-line>.arrow {
+  width: 6px;
+  height: 2500px;
+  /* background-color: rgba(255, 87, 34, 0.8); */
+  background-color: rgba(115,115,115,1);
+  display: inline;
+  position: absolute;
+  z-index: -1;
+  transform: translate(0px, 100px);
+
+  animation: arrow-down ease-out 6s;
+}
+
+.history-element {
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.history-element-right {
+  margin-left: 50%;
+  justify-content: flex-start;
+
+}
+
+.history-element-left {
+  margin-right: 50%;
+  justify-content: flex-end;
+}
+
+.animation {
+  position: absolute;
+  width: 50%;
+}
+
+
+
+.mask {
+  position: absolute;
+  top: 0;
+  
+  width: 600px; 
+  height: 45px;
+  z-index: 10;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+.mask-right {
+  left: 0;
+  animation: show-diagonal-right 0.45s 0.25s linear forwards;
+}
+
+.mask-left{
+  right: 0;
+  animation: show-diagonal-left 0.45s 0.25s linear forwards;
+} 
+
+.line {
+  fill: none;
+  stroke: rgb(115,115,115);
+  /* stroke: rgba(255, 87, 34, 0.8); */
+  stroke-width: 6;
+}
+
+.horizontal {
+  stroke-width: 12;
+}
+
+.content {
+  height: 140px;
+  /* width: 320px; */
+
+  position: relative;
+  z-index: 11;
+
+  font-family: Poppins;
+  padding-top: 9px;
+  padding-left: 8px;
+
+  color: rgb(75,75,75);
+}
+
+.content-right {
+  margin-left: 110px;
+}
+
+.content-left {
+  margin-right: 110px;
+}
+
+.content-header {
+  position: absolute;
+  top: -38px;
+
+  font-size: 22px;
+  
+  animation: content-appear 1.4s;
+}
+
+.content-body {
+  padding-top: 6px;
+  line-height: 26px;
+  font-size: 18px;
+  animation: content-appear 1.4s;
+}
+
+@keyframes show-diagonal-right {
+  from { left: 0; top: 0; }
+  to { left: 451px; top: 0px; }
+}
+
+@keyframes show-diagonal-left {
+  from { right: 0; top: 0; }
+  to { right: 451px; top: 0;}
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translate(-5px, -20px);
+  }
+  30% {
+    transform: translate(-2px, -6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate(-5px, -20px)
+  }
+
+  30% {
+    transform: translate(-2px, -6px);
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes content-appear {
+  0% {
+    opacity: 0;
+    
+  }
+  20% {
+    opacity: 0;
+    transform: translate(-5px, -20px)
+  }
+  50% {
+    transform: translate(-1px, -4px);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes contact-pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1.20)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes circle-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle-up {
+  0% {
+    transform: translate(0px, 120px);
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    height: 0px;
+    
+  }
+
+  6% {
+    height: 0px;
+    transform: translate(0px, 110px);
+  }
+
+  19% {
+    transform: translate(0px, 90px);
+  }
+
+  100% {
+    height: 2500px;
+  }
+}
