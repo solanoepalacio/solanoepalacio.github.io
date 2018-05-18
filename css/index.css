@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  padding: 65px 150px;
 }
 
 #paper {
@@ -60,23 +59,13 @@ body {
 .contactme {
   position: absolute;
 
-  background-color: #b0ff57;
-  border-radius: 9px;
-  height: 70px;
-  width: 70px;
-  transition: all 0.4s;
+  background-color: rgb(235,235,235);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 24px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  animation: contact-pop 1.8s;
 }
 
-.contactme-container:hover .contactme,.contactme:hover {
-  width: 480px;
-  height: 172px;
-  /* bottom: -42px;
-  right: -510px; */
-  left: 50px;
-  transition: all 0.4s;
-}
 .contactinfo-container {
   box-sizing: border-box;
   height: 100%;
@@ -90,7 +79,7 @@ body {
 
 .contactinfo-container .icon {
   padding: 0 6px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .contactinfo-container a.link {
@@ -121,9 +110,13 @@ body {
   }
 }
 
-.contactme-container:hover .contactinfo-container, .contactme:hover .contactinfo-container {
+.contactme-container .contactinfo-container, .contactme .contactinfo-container {
 
   animation: appear 0.5s ease-in forwards;
+}
+
+.cinfo {
+  line-height: 38px;
 }
 
 .chat-bubble {
