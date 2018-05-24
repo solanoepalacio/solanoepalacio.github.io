@@ -58,49 +58,26 @@ body {
 }
 
 .contactme {
-  position: absolute;
-
-  background-color: #b0ff57;
-  border-radius: 9px;
-  height: 70px;
-  width: 70px;
+  box-sizing: border-box;
+  position: relative;
+  top: 45px;
   transition: all 0.4s;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   animation: contact-pop 1.8s;
+  width: 95%;
+  padding: 36px;
 }
 
-.contactme-container:hover .contactme,.contactme:hover {
-  width: 480px;
-  height: 172px;
-  /* bottom: -42px;
-  right: -510px; */
-  left: 50px;
-  transition: all 0.4s;
-}
-.contactinfo-container {
-  box-sizing: border-box;
-  height: 100%;
-  opacity: 0;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: green;
-}
-
-.contactinfo-container .icon {
-  padding: 0 6px;
-  font-size: 14px;
-}
 
 .contactinfo-container a.link {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-.contactinfo-container>div {
+.contactinfo-container * {
   font-size: 18px;
   font-family: poppins;
+  line-height: 32px;
 }
 
 .github {
@@ -110,20 +87,6 @@ body {
   color: inherit;
   height: 18px;
   width: 18px;
-}
-
-.contactme-container:hover .chat-bubble {
-  animation: fadeout 0.4s linear forwards;
-}
-@keyframes fadeout {
-  100% {
-    opacity: 0;
-  }
-}
-
-.contactme-container:hover .contactinfo-container, .contactme:hover .contactinfo-container {
-
-  animation: appear 0.5s ease-in forwards;
 }
 
 .chat-bubble {
