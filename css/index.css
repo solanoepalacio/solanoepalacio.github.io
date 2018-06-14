@@ -68,6 +68,43 @@ body {
   padding: 36px;
 }
 
+.contact-type {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact-type>span {
+  display: inline-block;
+}
+
+.icon {
+  margin-right: 12px;
+  display: inline-block;
+  color: inherit;
+  height: 21px;
+  width: 21px;
+}
+
+.github {
+  background: url(../icons/github.svg) no-repeat center;
+  background-size: contain;
+}
+
+.linkedin {
+  background: url(../icons/linkedin.svg) no-repeat center;
+  background-size: contain;
+}
+
+.phone {
+  background: url(../icons/phone.svg) no-repeat center;
+}
+
+.mail {
+  background: url(../icons/mail.svg) no-repeat center;
+}
 
 .contactinfo-container a.link {
   text-decoration: none !important;
@@ -80,23 +117,7 @@ body {
   line-height: 32px;
 }
 
-.github {
-  background: url(../icons/github.svg) no-repeat center;
-  background-size: contain;
-  display: inline-block;
-  color: inherit;
-  height: 18px;
-  width: 18px;
-}
 
-.chat-bubble {
-  position: absolute;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  background: url(../icons/chat.jpeg) no-repeat 50% 55%;
-  background-size: 45%;
-}
 
 .info {
   position: relative;
