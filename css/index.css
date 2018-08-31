@@ -43,7 +43,7 @@ body {
   /* border-radius: 12px; */
   background: url(../images/profile-picture.jpg) no-repeat center;
   background-size: cover;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 40px rgba(0,0,0,0.22);
+  /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 40px rgba(0,0,0,0.22); */
   position: relative;
 
   animation: fall 0.55s ease-in;
