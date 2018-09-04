@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding: 65px 150px;
+  padding: 65px 110px;
 }
 
 #paper {
@@ -24,8 +24,6 @@ body {
   width: 50%;
 }
 
-
-
 /* ============== Profile Sections ================== */
 
 .profile {
@@ -37,6 +35,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .picture {
   height: 460px;
   width: 290px;
@@ -47,6 +46,29 @@ body {
   position: relative;
 
   animation: fall 0.55s ease-in;
+}
+
+.side {
+  width: 65%;
+}
+
+.picture-frame.side {
+  width: 35%;
+  /* display: none; */
+}
+
+.picture {
+  transform: scaleX(0.75) scaleY(0.75) translateY(65px);
+}
+
+@media only screen and (max-width: 768px) {
+  .picture-frame {
+    display: none;
+  }
+
+  .side {
+    width: 85%;
+  }
 }
 
 .contactme-container {
@@ -70,9 +92,6 @@ body {
 
 .contact-type {
   height: 30px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   margin-bottom: 8px;
 }
 
@@ -84,8 +103,10 @@ body {
   margin-right: 12px;
   display: inline-block;
   color: inherit;
-  height: 21px;
+  height: 30px;
   width: 21px;
+  position: relative;
+  top: 8px;
 }
 
 .github {
@@ -116,8 +137,6 @@ body {
   font-family: poppins;
   line-height: 32px;
 }
-
-
 
 .info {
   position: relative;
@@ -238,7 +257,6 @@ body {
   
 }
 
-
 .history-element {
   box-sizing: border-box;
   width: 50%;
@@ -247,6 +265,8 @@ body {
   align-items: flex-start;
   visibility: hidden;
 }
+
+
 
 .history-element.active {
   visibility: visible;
@@ -259,7 +279,6 @@ body {
 .history-element-right {
   margin-left: 50%;
   justify-content: flex-start;
-
 }
 
 .history-element-left {
@@ -351,16 +370,76 @@ body {
   font-size: 22px;
 }
 
-
-
 .content-body {
   padding-top: 6px;
   line-height: 26px;
   font-size: 18px;
 
   opacity: 0;
+}
+
+.mobile-line {
+  display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .history-element {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .history-element-right {
+    margin-left: 0;
+  }
+  .history-element-left {
+    margin-right: 0;
+  }
+
+  .animation {
+    width: 100%;
+  }
+
+  .animation-right,.animation-left {
+    left: 15%;
+  }
+
+
+  .segment-left {
+    left: -7.5px;
+  }
+
+  .circle-wrapper-left {
+    left: -50px;
+  }
+
+  .history-element-left .desktop-line {
+    display: none;
+  }
+
+  .mobile-line {
+    display: block;
+  }
+
+  .mobile-line svg {
+    left: 0;
+  }
+  .content {
+    width: 50%;
+  }
+
+  .content-right, .content-left {
+    margin-left: 0;
+    margin-right: 15%;
+  }
   
 }
+
 .external-link-icon {
   font-size: 18px;
   padding-left: 6px;
@@ -388,6 +467,12 @@ body {
   width: 60%;
   margin: 0 auto;
   font-family: poppins;
+}
+
+@media only screen and (max-width: 880px) {
+  .present-header,.present-body {
+    width: 85%;
+  } 
 }
 
 .present-section .present-header {
