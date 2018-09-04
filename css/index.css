@@ -133,7 +133,7 @@ body {
 }
 
 .contactinfo-container * {
-  font-size: 18px;
+  font-size: 1em;
   font-family: poppins;
   line-height: 32px;
 }
@@ -145,14 +145,14 @@ body {
 .personal-info {
   color: rgb(76,76,76);
   font-family: Poppins;
-  padding-left: 15px;
+  padding-left: 4%;
 }
 
 .personal-info>.name {
-  font-size: 48px;
+  font-size: 3em;
   font-variant: small-caps;
- 
-  line-height: 72px;
+  white-space: nowrap;
+  line-height: 2em;
   letter-spacing: 0.2ch;
   text-decoration: #b0ff57 underline;
   text-underline-position: under;
@@ -160,15 +160,27 @@ body {
   animation: appear 0.85s both;
 }
 
+@media only screen and (max-width: 420px) {
+  #writable-paper {
+    width: 100%;
+  }
+  .contactme {
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    font-size: 0.8em;
+  }
+}
+
 .personal-info>.description {
-  font-size: 24px;
+  font-size: 1.7em;
 
   animation: appear 0.85s 0.25s both;
 }
 
 .personal-info>.meta-description {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.2em;
   opacity: 0.85;
 
   animation: appear 0.85s 0.5s both;
@@ -232,6 +244,7 @@ body {
   border: 8px solid  rgb(115,115,115);
   /* rgba(255, 87, 34, 0.8); */
 }
+
 
 
 
@@ -367,7 +380,7 @@ body {
   position: absolute;
   top: -38px;
 
-  font-size: 22px;
+  font-size: 1.7em;
 }
 
 .content-body {
@@ -388,7 +401,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1024px) {
   .history-element {
     width: 100%;
     justify-content: flex-end;
@@ -440,6 +453,42 @@ body {
   
 }
 
+@media only screen and (max-width: 420px) {
+  .personal-info>.name {
+    font-size: 2em;
+  }
+  .circle-wrapper-left {
+    left: -34px;
+  }
+
+  .circle-wrapper-right {
+    left: -35px;
+  }
+  .circle-wrapper .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mobile-line svg, .desktop-line svg {
+    transform: translateX(-20px)
+  }
+
+  .content-header {
+    font-size: 1.3em;
+  }
+  .content-body {
+    font-size: 1.1em;
+  }
+
+
+}
+
+@media only screen and (max-width: 1024) {
+  .present-header,.present-body {
+    width: 85%;
+  } 
+}
+
 .external-link-icon {
   font-size: 18px;
   padding-left: 6px;
@@ -469,11 +518,7 @@ body {
   font-family: poppins;
 }
 
-@media only screen and (max-width: 880px) {
-  .present-header,.present-body {
-    width: 85%;
-  } 
-}
+
 
 .present-section .present-header {
   font-size: 30px;
