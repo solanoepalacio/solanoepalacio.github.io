@@ -220,6 +220,8 @@ body {
 .circle-wrapper {
   display: inline;
   position: absolute;
+  -webkit-transform: translate3d(0,0,0);
+  z-index: 200;
 }
 
 
