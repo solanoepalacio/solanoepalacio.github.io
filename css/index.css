@@ -1,5 +1,8 @@
 /* ============== globals ================== */
-
+* {
+  color: rgb(75,75,75);
+  font-family: Poppins;
+}
 body {
   margin: 0;
   padding: 65px 110px;
@@ -17,11 +20,15 @@ body {
   overflow: hidden;
 }
 
-.section {
-}
-
 .side {
   width: 50%;
+}
+
+.section-title {
+  margin:0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 /* ============== Profile Sections ================== */
@@ -37,8 +44,8 @@ body {
 }
 
 .picture {
-  height: 460px;
-  width: 290px;
+  width: 14em;
+  height: 320px;
   /* border-radius: 12px; */
   background: url(../images/profile-picture.jpg) no-repeat center;
   background-size: cover;
@@ -49,16 +56,12 @@ body {
 }
 
 .side {
-  width: 65%;
+  width: 50%;
 }
 
 .picture-frame.side {
   width: 35%;
   /* display: none; */
-}
-
-.picture {
-  transform: scaleX(0.75) scaleY(0.75) translateY(65px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -71,23 +74,10 @@ body {
   }
 }
 
-.contactme-container {
-  position: absolute;
-  right: -50px;
-  bottom: -42px;
-  height: 172px;
-  width: 70px;
-}
-
 .contactme {
   box-sizing: border-box;
-  position: relative;
-  top: 45px;
   transition: all 0.4s;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  animation: contact-pop 1.8s;
-  width: 95%;
-  padding: 36px;
+  padding: 2em;
 }
 
 .contact-type {
@@ -174,7 +164,6 @@ body {
 
 .personal-info>.description {
   font-size: 1.7em;
-
   animation: appear 0.85s 0.25s both;
 }
 
@@ -186,13 +175,24 @@ body {
   animation: appear 0.85s 0.5s both;
 }
 
+.about-me {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 2.5em;
+}
+
+.about-me p {
+  margin: 3px 0;
+}
+
+
 
 /* ============== History Section ================== */
 
 .history {
   position: relative;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .segment {
@@ -247,10 +247,6 @@ body {
   /* rgba(255, 87, 34, 0.8); */
 }
 
-
-
-
-
 .birth {
   background: url(../icons/baby-pacifier.svg);
 }
@@ -280,8 +276,6 @@ body {
   align-items: flex-start;
   visibility: hidden;
 }
-
-
 
 .history-element.active {
   visibility: visible;
@@ -356,16 +350,11 @@ body {
 }
 
 .content {
-  width: 320px;
-
   position: relative;
   z-index: 11;
-
-  font-family: Poppins;
-  padding-top: 9px;
-  padding-left: 8px;
-
+  padding: 2px;
   color: rgb(75,75,75);
+  
 }
 
 .content-right {
@@ -380,21 +369,27 @@ body {
   opacity: 0;
   white-space: nowrap;
   position: absolute;
-  top: -38px;
+  top: -30px;
+  font-size: 1.2em;
+}
 
-  font-size: 1.7em;
+@media only screen and (max-width: 768px) {
+  .content-header {
+    font-size: 1.25em;
+    top: -30px;
+  }
+
+  .content-body {
+    font-size: 15px;
+  }
+
 }
 
 .content-body {
   padding-top: 6px;
   line-height: 26px;
   font-size: 18px;
-
   opacity: 0;
-}
-
-.mobile-line {
-  display: none;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -406,7 +401,8 @@ body {
 @media only screen and (max-width: 1024px) {
   .history-element {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 125px;
   }
 
   .history-element-right {
@@ -421,9 +417,8 @@ body {
   }
 
   .animation-right,.animation-left {
-    left: 15%;
+    left: 60px;
   }
-
 
   .segment-left {
     left: -7.5px;
@@ -433,19 +428,12 @@ body {
     left: -50px;
   }
 
-  .history-element-left .desktop-line {
-    display: none;
-  }
-
   .mobile-line {
     display: block;
   }
 
   .mobile-line svg {
     left: 0;
-  }
-  .content {
-    width: 50%;
   }
 
   .content-right, .content-left {
@@ -471,7 +459,7 @@ body {
     height: 50px;
   }
 
-  .mobile-line svg, .desktop-line svg {
+  .mobile-line svg, .line-container svg {
     transform: translateX(-48px)
   }
 
@@ -517,7 +505,6 @@ body {
   opacity: 0;
   width: 60%;
   margin: 0 auto;
-  font-family: poppins;
 }
 
 
@@ -587,12 +574,12 @@ body {
 
 @keyframes show-diagonal-right {
   from { left: 0; top: 0; }
-  to { left: 451px; top: 0px; }
+  to { left: 750px; top: 0px; }
 }
 
 @keyframes show-diagonal-left {
   from { right: 0; top: 0; }
-  to { right: 451px; top: 0;}
+  to { right: 750px; top: 0;}
 }
 
 
