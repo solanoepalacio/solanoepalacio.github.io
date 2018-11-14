@@ -150,8 +150,7 @@ const onunload = () => {
     },
     '?'
   );
-  fetch(`${host}?${queryString}`).then((response)=> response.json()).then((res) => console.log('res', res));
+  navigator.sendBeacon(`${host}?${queryString}`);
 }
 
-onunload();
 window.onunload = onunload;
