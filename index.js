@@ -150,7 +150,7 @@ const onunload = () => {
     },
     '?'
   );
-  navigator.sendBeacon(`${host}?${queryString}`);
+  window.navigator.sendBeacon(`${host}?${queryString}`);
 }
 
 
