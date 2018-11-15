@@ -90,6 +90,7 @@ body {
 .contact-type {
   height: 30px;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .contact-type>span {
@@ -198,6 +199,10 @@ body {
   background-color: rgb(220,220,220);
 }
 
+.tab:hover {
+  cursor: pointer;
+}
+
 .tab.active {
   background-color: white;
   border-right: 1px;
@@ -239,6 +244,9 @@ body {
 @media only screen and (max-width: 782px) {
   .exp .context {
     flex-direction: column;
+  }
+  .exp .content {
+    width: 100%;
   }
 }
 
