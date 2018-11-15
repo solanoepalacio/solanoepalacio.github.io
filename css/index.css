@@ -24,11 +24,18 @@ body {
   width: 50%;
 }
 
+.section {
+  margin: 0 auto;
+  margin-bottom: 2.5em;
+  width: 80%;
+}
+
 .section-title {
   margin:0;
   width: 100%;
   text-align: center;
   font-size: 1.2em;
+  margin-top: 1.2em;
 }
 
 /* ============== Profile Sections ================== */
@@ -175,17 +182,89 @@ body {
   animation: appear 0.85s 0.5s both;
 }
 
-.about-me {
-  width: 60%;
-  margin: 0 auto;
-  margin-bottom: 2.5em;
-}
-
 .about-me p {
   margin: 3px 0;
 }
 
+/* ============== Experience Section ================== */
 
+#tabs {
+  width: 100%;
+  display: flex;
+}
+
+.tab {
+  width: 50%;
+  background-color: rgb(220,220,220);
+}
+
+.tab.active {
+  background-color: white;
+  border-right: 1px;
+  border-left: 1px;
+  border-top: 1px;
+  border-bottom: 0;
+  border-color: rgb(220,220,220);
+  border-style: solid;
+}
+
+#tabs p {
+  margin: 0.3em;
+  text-align: center;
+}
+
+.exp>.container {
+  background-color: white;
+  border-right: 1px;
+  border-left: 1px;
+  border-bottom: 1px;
+  border-top: 0;
+  border-color: rgb(220,220,220);
+  border-style: solid;
+  padding: 1em;
+}
+
+.exp>.container>div {
+  width: 100%;
+  display: none;
+}
+
+.exp>.container>div.active {
+  display: flex;
+}
+
+.exp .content {
+  width: 50%;
+}
+
+.exp .content h4 {
+  margin: 0.2em;
+}
+
+.exp .content ul {
+  margin: 0;
+  padding-left: 0.4em;
+}
+
+.exp .content ul>li{
+  list-style-type: none;
+  font-size: 0.85em;
+}
+
+.exp .content ul>li::before{
+  content: '> ';
+  color: rgb(120,120,120);
+}
+
+.active>.uiux-tile {
+  color: red;
+}
+
+@media only screen and (max-width: 680px) {
+  .experience .content {
+    width: 100%;
+  }
+}
 
 /* ============== History Section ================== */
 
@@ -215,6 +294,7 @@ body {
   animation: segment ease-in 0.5s linear forward;
 
 }
+
 
 
 .circle-wrapper {
@@ -490,10 +570,6 @@ body {
 
 .external-link {
   color: #F44B4B;
-}
-
-.present-section {
-
 }
 
 .em {

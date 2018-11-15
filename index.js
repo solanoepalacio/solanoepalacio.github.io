@@ -153,4 +153,34 @@ const onunload = () => {
   navigator.sendBeacon(`${host}?${queryString}`);
 }
 
+
+
+function updateActiveList (list, name) {
+  list.forEach((tab) => {
+    if (
+      !tab.classList.contains(name) &&
+      tab.classList.contains('active')
+    ) {
+      tab.classList.remove('active');
+    }
+    
+    if (
+      tab.classList.contains(name) &&
+      !tab.classList.contains('active')
+    ) {
+      tab.classList.add('active');
+    }
+  });
+}
+
+const tabs = document.querySelectorAll('.tab');
+const contexts = document.querySelectorAll('.context');
+tabs.forEach((tab) => {
+  const tagName = tab.classList.contains('uiux') ? 'uiux' : 'serverside';
+  tab.addEventListener('click', (e) => {
+    updateActiveList(tabs, tagName);
+    updateActiveList(contexts, tagName)
+  });
+});
+
 window.onunload = onunload;
