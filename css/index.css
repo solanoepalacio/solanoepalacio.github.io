@@ -224,18 +224,24 @@ body {
   padding: 1em;
 }
 
-.exp>.container>div {
+.exp>.container>.context {
   width: 100%;
   display: none;
 }
 
-.exp>.container>div.active {
+.exp>.container>.context.active {
   display: flex;
 }
 
 .exp .content {
   width: 50%;
 }
+@media only screen and (max-width: 782px) {
+  .exp .context {
+    flex-direction: column;
+  }
+}
+
 
 .exp .content h4 {
   margin: 0.2em;
