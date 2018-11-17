@@ -162,6 +162,7 @@ function updateActiveList (list, name) {
       tab.classList.contains('active')
     ) {
       tab.classList.remove('active');
+      tab.classList.add('inactive');
     }
     
     if (
@@ -169,6 +170,7 @@ function updateActiveList (list, name) {
       !tab.classList.contains('active')
     ) {
       tab.classList.add('active');
+      tab.classList.remove('inactive');
     }
   });
 }
