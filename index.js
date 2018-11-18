@@ -136,9 +136,12 @@ const onunload = () => {
     language,
     platform,
     navigator,
-    timestamp: timestamp.toJSON(),
-    sessionDuration: new Date().getTime() - timestamp.getTime()
+    timestamp: Date.now(),
+    sessionDuration: new Date().getTime() - timestamp.getTime(),
+    referrer: document.referrer || 'dev'
   };
+
+  console.log('sending visit', params);
 
   const queryString = Object.keys(params).reduce(
     (acc, key, index) => {
@@ -150,8 +153,16 @@ const onunload = () => {
     },
     '?'
   );
-  window.navigator.sendBeacon(`${host}?${queryString}`);
+
+  console.log('sending visit', params, queryString);
+
+  if (params.referrer !== 'dev') {
+    window.navigator.sendBeacon(`${host}?${queryString}`);
+  }
 }
+
+window.onunload = onunload;
+onunload();
 
 
 
@@ -185,4 +196,4 @@ tabs.forEach((tab) => {
   });
 });
 
-window.onunload = onunload;
+

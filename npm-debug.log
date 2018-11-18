@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'serverless' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData serverless
+8 silly fetchNamedPackageData serverless
+9 silly mapToRegistry name serverless
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/serverless
+13 verbose request uri https://registry.npmjs.org/serverless
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 2:06:06 PM
+16 verbose request id 13f6653984624f1d
+17 http request GET https://registry.npmjs.org/serverless
+18 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 67.55.121.97:443
+19 info attempt registry request try #2 at 2:06:26 PM
+20 http request GET https://registry.npmjs.org/serverless
+21 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 67.55.121.97:443
+22 info attempt registry request try #3 at 2:07:37 PM
+23 http request GET https://registry.npmjs.org/serverless
+24 silly fetchPackageMetaData Error: connect ECONNREFUSED 67.55.121.97:443
+24 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:870:11)
+24 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:893:20)
+24 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+24 silly fetchPackageMetaData  error for serverless { [Error: connect ECONNREFUSED 67.55.121.97:443]
+24 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+24 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+24 silly fetchPackageMetaData   syscall: 'connect',
+24 silly fetchPackageMetaData   address: '67.55.121.97',
+24 silly fetchPackageMetaData   port: 443 }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: connect ECONNREFUSED 67.55.121.97:443
+30 verbose stack     at Object.exports._errnoException (util.js:870:11)
+30 verbose stack     at exports._exceptionWithHostPort (util.js:893:20)
+30 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+31 verbose cwd /home/solano/projects/resume
+32 error Linux 4.13.0-39-generic
+33 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "serverless"
+34 error node v4.2.6
+35 error npm  v3.5.2
+36 error code ECONNREFUSED
+37 error errno ECONNREFUSED
+38 error syscall connect
+39 error Error: connect ECONNREFUSED 67.55.121.97:443
+39 error     at Object.exports._errnoException (util.js:870:11)
+39 error     at exports._exceptionWithHostPort (util.js:893:20)
+39 error     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+39 error  { [Error: connect ECONNREFUSED 67.55.121.97:443]
+39 error   code: 'ECONNREFUSED',
+39 error   errno: 'ECONNREFUSED',
+39 error   syscall: 'connect',
+39 error   address: '67.55.121.97',
+39 error   port: 443 }
+40 error If you are behind a proxy, please make sure that the
+40 error 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]
