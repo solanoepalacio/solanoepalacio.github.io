@@ -156,15 +156,10 @@ const onunload = () => {
 
   console.log('sending visit', params, queryString);
 
-  if (params.referrer !== 'dev') {
-    window.navigator.sendBeacon(`${host}?${queryString}`);
-  }
+  window.navigator.sendBeacon(`${host}${queryString}`);
 }
 
 window.onunload = onunload;
-onunload();
-
-
 
 function updateActiveList (list, name) {
   list.forEach((tab) => {
