@@ -190,5 +190,3 @@ tabs.forEach((tab) => {
     updateActiveList(contexts, tagName)
   });
 });
-
-
